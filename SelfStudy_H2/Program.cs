@@ -17,6 +17,8 @@ internal class Program
         string nameAndAge = GetNameAndAge(name, age);
         Console.WriteLine(nameAndAge);
 
+        // ----------------------------------------------------------
+
         // Milestone 6 - Code-standards
         /*
          * Q: What are the naming conventions in C#?
@@ -46,6 +48,8 @@ internal class Program
          * A: Code standards are important because they promote consistency, readability, and maintainability in software development.
          */
 
+        // ----------------------------------------------------------
+
         // Milestone 19 - Version control
         /*
          * This repo will have several commits each indicating the completion of a milestone, and will be pushed to GitHub as well as being shared with the teacher.
@@ -53,6 +57,68 @@ internal class Program
          * Q: Why is Git important for teamwork?
          * A: Git is important for teamwork because it allows multiple developers to collaborate on the same codebase without conflicts.
          * This is achieved through features like branching and merging, which enable developers to work on different features or bug fixes simultaneously and then integrate their changes back into the main codebase.
+         */
+
+        // ----------------------------------------------------------
+
+        // Milestone 5 - Collections
+        /*
+         * The milestone in the PDF mentions Lists, Sets and Map.
+         * Only one of these is "correctly" named for C#, which is Lists (List<>).
+         * Sets (from the further down explanation) are what in C# are called HashSet<>, and Maps are Dictionary<,>.
+         */
+
+        // Lists
+        List<string> names = new() { "Nikolaj", "Vladislav", "Jacob", "Jonas", "Tore" };
+        foreach(var personName in names)
+            Console.WriteLine(personName);
+        names.Add("Kenneth");
+        Console.WriteLine("After adding Kenneth:");
+        Console.WriteLine(string.Join(", ", names)); // This enumerates on it's own.
+        /*
+         * Q: Does a List keep the order of the elements?
+         * A: Yes, a List in C# maintains the order of the elements as they were added. When you add an element to a List, it is appended to the end of the list, and when you iterate over the List, the elements are returned in the order they were added.
+         *
+         * Q: Can a list contain duplicate elements?
+         * A: Yes, a List in C# can contain duplicate elements, there are no restrictions.
+         */
+
+        // Sets (HashSet)
+        HashSet<string> uniqueNames = new() { "Nikolaj", "Vladislav", "Jacob", "Jonas", "Tore" };
+        uniqueNames.Add("Kenneth");
+        uniqueNames.Add("Kenneth"); // "Silently fails"
+        Console.WriteLine(string.Join(", ", uniqueNames));
+        /*
+         * Q: Does a Set keep the order of the elements?
+         * A: No, a HashSet in C# does not maintain the order of the elements. The order of elements in a HashSet is not guaranteed and can change when new elements are added or removed.
+         *
+         * Q: Can a Set contain duplicate elements?
+         * A: No, a HashSet in C# cannot contain duplicate elements. If you try to add an element that already exists in the HashSet, it will not be added again, and the existing element will remain unchanged.
+         * 
+         * Furthermore. in real world scenarios one would often do a if (!uniqueNames.Add("Kenneth"))
+         * This is because the .Add method of a HashSet returns a boolean indicating whether the element was
+         * successfully added (true) or if it already existed in the set (false).
+         */
+
+        // Maps (Dictionary)
+        Dictionary<string, int> nameToAge = new() 
+        { 
+            { "Nikolaj", 23 }, 
+            { "Vladislav", 20 }, 
+            { "Jacob", 28 }, // Det må give bonus-point ;)  
+            { "Jonas", 19 }, 
+            { "Tore", 130 } 
+        };
+
+        Console.WriteLine(nameToAge["Jacob"]);
+        foreach(var kvp in nameToAge)
+            Console.WriteLine($"{kvp.Key} is {kvp.Value} years old.");
+        /*
+         * Q: What are keys used for - And can they be duplicated?
+         * A: In a Dictionary (or Map) in C#, keys are used to uniquely identify values. 
+         * Each key in a Dictionary is associated with a specific value, and you can use the key to retrieve or manipulate the corresponding value.
+         * Keys must be unique within a Dictionary, meaning that you cannot have duplicate keys. 
+         * When you want to access a value in a Dictionary, you provide the key, and the Dictionary returns the associated value.
          */
     }
 
