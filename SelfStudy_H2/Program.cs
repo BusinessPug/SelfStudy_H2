@@ -120,6 +120,20 @@ internal class Program
          * Keys must be unique within a Dictionary, meaning that you cannot have duplicate keys. 
          * When you want to access a value in a Dictionary, you provide the key, and the Dictionary returns the associated value.
          */
+
+        // ----------------------------------------------------------
+
+        // Reflection
+        /*
+         * Q: When would you use a List?
+         * A: In C#, you would use a List when you need an ordered collection of elements that can contain duplicates and allows for dynamic resizing. (That last part being really important for ease of work)
+         * 
+         * Q: When would you use a Set?
+         * A: A HashSet (or Set) in C# is used when you need a collection of unique elements and do not care about the order of the elements. (It is also extremely fast and memory efficient)
+         * 
+         * Q: When would you use a Map?
+         * A: A Dictionary (or Map) in C# is used when you need to associate keys with values, allowing for fast lookups, additions, and deletions based on the key. (Great for caching or any scenario where you want to quickly retrieve data based on a unique identifier)
+         */
     }
 
     static string GetNameAndAge(string name, int age)
