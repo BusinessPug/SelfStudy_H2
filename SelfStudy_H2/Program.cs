@@ -49,6 +49,10 @@ internal class Program
         // Milestone 19 - Version control
         /*
          * This repo will have several commits each indicating the completion of a milestone, and will be pushed to GitHub as well as being shared with the teacher.
+         * 
+         * Q: Why is Git important for teamwork?
+         * A: Git is important for teamwork because it allows multiple developers to collaborate on the same codebase without conflicts.
+         * This is achieved through features like branching and merging, which enable developers to work on different features or bug fixes simultaneously and then integrate their changes back into the main codebase.
          */
     }
 
