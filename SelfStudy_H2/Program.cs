@@ -45,6 +45,11 @@ internal class Program
          * Q: Why are code standards important?
          * A: Code standards are important because they promote consistency, readability, and maintainability in software development.
          */
+
+        // Milestone 19 - Version control
+        /*
+         * This repo will have several commits each indicating the completion of a milestone, and will be pushed to GitHub as well as being shared with the teacher.
+         */
     }
 
     static string GetNameAndAge(string name, int age)
